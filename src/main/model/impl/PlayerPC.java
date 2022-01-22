@@ -14,13 +14,27 @@
  *    limitations under the License.
  */
 
-package main.devonline;
+package main.model.impl;
+
+import main.model.BasePlayer;
+import main.model.PlayersMove;
+
+import java.util.Random;
 
 /**
  * @author L. Rastorguev
  **/
-public final class Launcher {
-    public static void main(final String[] args) {
+public class PlayerPC extends BasePlayer {
 
+    public PlayerPC(final String name, final char mark) {
+        super(name, mark);
+    }
+
+    @Override
+    public PlayersMove getMove(int range) {
+
+        int move = new Random().nextInt(range) + 1;
+
+        return new PlayersMove(move, mark);
     }
 }

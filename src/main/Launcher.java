@@ -16,26 +16,19 @@
 
 package main;
 
+
+import main.component.Game;
+import main.model.impl.RepositoryPlayersUserPC;
+
 /**
  * @author L. Rastorguev
  **/
-// Класс - модель (класс данных)
-public final class ResultMove {
-    public static int WIN = 1;
-    public static int DRAW = 0;
-    public static int GAME_CONTINUES = -1;
+public class Launcher {
 
-    private final int result;
+    public static void main(final String[] args) {
 
-    public ResultMove(int result) {
-        this.result = result;
-    }
+        Game game = new Game(new RepositoryPlayersUserPC());
 
-    public boolean gameOver() {
-        return result != GAME_CONTINUES;
-    }
-
-    public boolean isDraw() {
-        return result == DRAW;
+        game.runPlay();
     }
 }

@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package main;
+package main.model;
 
 import java.util.Arrays;
 

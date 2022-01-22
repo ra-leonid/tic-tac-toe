@@ -14,27 +14,28 @@
  *    limitations under the License.
  */
 
-package main.impl;
-
-import main.BasePlayer;
-import main.PlayersMove;
-
-import java.util.Random;
+package main.model;
 
 /**
  * @author L. Rastorguev
  **/
-public class PlayerPC extends BasePlayer {
+// Класс - модель (класс данных)
+public final class ResultMove {
+    public static int WIN = 1;
+    public static int DRAW = 0;
+    public static int GAME_CONTINUES = -1;
 
-    public PlayerPC(final String name, final char mark) {
-        super(name, mark);
+    private final int result;
+
+    public ResultMove(int result) {
+        this.result = result;
     }
 
-    @Override
-    public PlayersMove getMove(int range) {
+    public boolean gameOver() {
+        return result != GAME_CONTINUES;
+    }
 
-        int move = new Random().nextInt(range) + 1;
-
-        return new PlayersMove(move, mark);
+    public boolean isDraw() {
+        return result == DRAW;
     }
 }

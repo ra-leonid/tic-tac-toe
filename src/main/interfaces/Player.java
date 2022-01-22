@@ -14,18 +14,18 @@
  *    limitations under the License.
  */
 
-package main;
+package main.interfaces;
+
+import main.model.PlayersMove;
 
 /**
  * @author L. Rastorguev
  **/
-public interface RepositoryPlayers {
+public interface Player {
 
-    Player[] getPlayers();
+    PlayersMove getMove(int range);
 
-    void informPlayers(String rulesGame);
+    void inform(String message);
 
-    void informPlayersGameOver(Player winPlayer, ResultMove resultMove);
+    String getName();
 }
-
-

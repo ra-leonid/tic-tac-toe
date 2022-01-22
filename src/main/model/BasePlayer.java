@@ -14,12 +14,14 @@
  *    limitations under the License.
  */
 
-package main;
+package main.model;
+
+import main.interfaces.Player;
 
 /**
  * @author L. Rastorguev
  **/
-public abstract class BasePlayer implements Player{
+public abstract class BasePlayer implements Player {
 
     protected char mark;
 

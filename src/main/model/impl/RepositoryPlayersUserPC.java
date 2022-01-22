@@ -14,11 +14,11 @@
  *    limitations under the License.
  */
 
-package main.impl;
+package main.model.impl;
 
-import main.Player;
-import main.RepositoryPlayers;
-import main.ResultMove;
+import main.interfaces.Player;
+import main.interfaces.RepositoryPlayers;
+import main.model.ResultMove;
 
 /**
  * @author L. Rastorguev

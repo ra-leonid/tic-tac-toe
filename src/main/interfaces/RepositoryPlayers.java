@@ -14,20 +14,20 @@
  *    limitations under the License.
  */
 
-package main.impl;
+package main.interfaces;
 
-
-import main.Play;
+import main.model.ResultMove;
 
 /**
  * @author L. Rastorguev
  **/
-public class TestPlay {
+public interface RepositoryPlayers {
 
-    public static void main(final String[] args) {
+    Player[] getPlayers();
 
-        Play play = new Play(new RepositoryPlayersUserPC());
+    void informPlayers(String rulesGame);
 
-        play.runPlay();
-    }
+    void informPlayersGameOver(Player winPlayer, ResultMove resultMove);
 }
+
+

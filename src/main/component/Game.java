@@ -14,19 +14,25 @@
  *    limitations under the License.
  */
 
-package main;
+package main.component;
+
+import main.interfaces.Player;
+import main.interfaces.RepositoryPlayers;
+import main.model.GameBoard;
+import main.model.PlayersMove;
+import main.model.ResultMove;
 
 /**
  * @author L. Rastorguev
  **/
 // Класс - описывающий бизнес-логику
-public final class Play {
+public final class Game {
 
     private final RepositoryPlayers players;
 
     private final GameBoard gameBoard = new GameBoard();
 
-    public Play(final RepositoryPlayers players) {
+    public Game(final RepositoryPlayers players) {
 
         this.players = players;
 

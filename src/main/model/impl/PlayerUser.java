@@ -14,10 +14,10 @@
  *    limitations under the License.
  */
 
-package main.impl;
+package main.model.impl;
 
-import main.BasePlayer;
-import main.PlayersMove;
+import main.model.BasePlayer;
+import main.model.PlayersMove;
 
 import java.util.Scanner;
 
